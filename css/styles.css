@@ -1,0 +1,226 @@
+:root{
+    --yellow-color: #FCB72B;
+    --dark-color: #495567;
+--grey-color:#939CAA;   
+--light-gray:#E5ECF4;
+--snow-:#F2F5F9;
+--purple-color:#FFF4DF;
+--white-color:#fff;
+--main-transition:0.3s ease;
+}
+
+
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('../fonts/LexendDeca-Regular.woff2') format('woff2'),
+        url('../fonts/LexendDeca-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/SpaceMono-Bold.woff2') format('woff2'),
+        url('../fonts/SpaceMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family:'Space Mono', "Arial",sans-serif;
+    background-color: var(--bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+
+.container {
+  max-width: 1146px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* SITE NAV */
+
+
+.nav {
+    background-color: var(--white-color);
+    padding-top: 22px;
+    padding-bottom: 21px;
+}
+.nav__wrapper {
+    display: flex;
+    align-items: center;
+}
+.nav__logo {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 58.18px;
+}
+.nav__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+.nav__item {
+ margin: 0;
+ padding: 0;
+}
+.nav__item~.nav__item{
+margin-left: 30px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--grey-color);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.nav__link:hover{
+    color:var(--yellow-color)
+}
+.btn {
+    text-decoration: none;
+    padding:14px 39px;
+    color: var(--white-color);
+    text-align: center;
+    transition: var(--main-transition);
+    cursor: pointer;
+    box-sizing: border-box;  
+}
+.btn-yellow {
+    background-color: var(--yellow-color);
+    border: 3px solid #FCB72B;
+}
+
+.btn-yellow:hover{
+    background-color: var(--white-color);
+    border: 3px solid var(--yellow-color);
+    color: var(--yellow-color);
+}
+
+.nav__btn {
+    margin-left: auto;
+}
+
+
+
+/* Features Section */
+
+.hero {
+    padding-top: 153px;
+    padding-bottom: 152px;
+    background-image:url(../img/three-rounds.svg) ,
+    url(../img/bg-hero.jpg);
+    background-size: 234px 62px , cover;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 639px) calc(424px),  center center;
+}
+
+.hero-content {
+    max-width: 500px;
+    position: relative;
+}
+
+.hero-content::before{
+content: "";
+background-image: url(../img/scooter-border.svg);
+width: 203px;
+position: absolute;
+height: 15px;
+top: 195px;
+left: -163px;
+z-index: 2;
+}
+
+
+
+.hero-content::after{
+    content: "";
+    background-image: url(../img/scooter-arrow.svg);
+    width: 454.38px;
+    position: absolute;
+    height: 153px;
+    z-index: 2;
+    background-repeat: no-repeat;
+    top: 195px;
+    left: 540px;    
+    }
+
+
+.hero-content__title {
+    font-size: 56px;
+line-height: 56px;
+letter-spacing: -2.5px;
+color: var(--white-color);
+margin: 0;
+margin-bottom: 40px;
+}
+.hero-content__desc {
+    margin: 0;
+    margin-bottom: 40px;
+    color: var(--white-color);
+    font-family: 'Lexend Deca';
+    margin-left: 96px;
+}
+
+.hero-content__btn{
+    margin-left: 96px;
+}
+
+.hero-content__btn:hover {
+    background-color: transparent;
+}
+
+
+
+
